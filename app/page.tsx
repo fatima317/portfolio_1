@@ -5,8 +5,6 @@ import Skills from "../components/ui/Skills";
 import Cases from "../components/ui/Cases";
 import Contact from "../components/ui/Contact";
 
-
-
 const Home = () => {
   return (
     <div>
