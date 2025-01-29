@@ -1,40 +1,30 @@
-'use client';
-import Image from "next/image";
+// components/Hero.tsx
 import React from "react";
 
 const Hero = () => {
   return (
-    <div className="flex flex-col items-center justify-center bg-gradient-to-b from-gray-400 to-gray-500 py-16 px-6">
-  <div className="p-4">
-    <Image
-      src="/profile.avif"
-      alt="profile image"
-      width={160}
-      height={160}
-      className="rounded-full shadow-lg"
-      priority
-    />
-  </div>
-  <h1 className="text-5xl text-white font-bold mb-4 tracking-wide">Fatima Saleem</h1>
-  <p className="text-lg text-white font-medium text-center max-w-2xl mb-8">
-    I’m a passionate beginner coder currently exploring the exciting world
-    of web development. With a focus on HTML, CSS, and TypeScript, I’m
-    dedicated to building user-friendly applications and honing my skills
-    in Next.js and Tailwind CSS. Let’s connect and explore the possibilities
-    together!
-  </p>
-  <button
-    onClick={() => {
-      const projectsElement = document.getElementById("projects");
-      if (projectsElement) {
-        projectsElement.scrollIntoView({ behavior: "smooth" });
-      }
-    }}
-    className="bg-slate-600 text-white p-3 rounded-lg hover:bg-slate-400 transition-colors duration-300"
-  >
-    Go to Projects
-  </button>
-</div>
+    <section className="bg-gradient-to-r from-blue-500 to-purple-500 text-white py-20">
+      <div className="container mx-auto text-center">
+        <h1 className="text-5xl font-bold mb-4">Fatima Saleem</h1>
+        <p className="text-xl mb-6">Dentist | AI Enthusiast </p>
+        <div className="space-x-4">
+          <a
+            href="/cv.pdf"
+            className="bg-white text-blue-500 px-6 py-3 rounded-lg shadow hover:bg-gray-100"
+            target="_blank" // Opens in a new tab
+            rel="noopener noreferrer" // Security best practice
+          >
+            View CV
+          </a>
+          <a
+            href="#contact"
+            className="bg-purple-700 text-white px-6 py-3 rounded-lg shadow hover:bg-purple-800"
+          >
+            Contact Me
+          </a>
+        </div>
+      </div>
+    </section>
   );
 };
 

@@ -1,19 +1,23 @@
-import About from "@/app/About/about";
-import { Footer } from "@/app/Footer/footer";
-import Header from "@/components/ui/navbar";
-import Hero from "@/components/ui/hero";
-import Projects from "@/app/Projects/projects";
-import { Skills } from "@/app/Skills/skills";
+import Hero from "../components/ui/Hero";
+import About from "../components/ui/About";
+import Experience from "../components/ui/Experience";
+import Skills from "../components/ui/Skills";
+import Cases from "../components/ui/Cases";
+import Contact from "../components/ui/Contact";
 
-export default function Home() {
+const Home = () => {
   return (
-  <div className="container mx-auto p-4">
-    <Header />
-    <Hero />
-    <About />
-    <Skills />
-    <Projects />
-    <Footer />
-  </div>
-)
-}
+    <div>
+      <Hero />
+      <main className="space-y-12">
+        <About />
+        <Experience />
+        <Skills />
+        <Cases />
+        <Contact />
+      </main>
+    </div>
+  );
+};
+
+export default Home;
